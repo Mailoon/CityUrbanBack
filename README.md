@@ -1,13 +1,13 @@
 # CityUrbanBack
 -Proyecto realizado por:
 JP, MG, SR, JQ
-#Platilla para ramas:
+# Platilla para ramas:
 
 Nombre_NombreDeTarea
 Apodo_NombreDeTarea
 
 
-#REGLA DE ORO:
+# REGLA DE ORO:
 
 1°git init
 2°git status
