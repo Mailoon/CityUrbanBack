@@ -7,7 +7,6 @@ package CityUrban.CityUrban.Entity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
@@ -38,6 +37,6 @@ public class Users {
     
     // Falta la parte mime para guarda imagenes pero esta por verse
 
-    
+    private Rol Rol;
     
 }
