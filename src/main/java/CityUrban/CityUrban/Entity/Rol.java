@@ -7,7 +7,6 @@ package CityUrban.CityUrban.Entity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
@@ -17,27 +16,14 @@ import org.hibernate.annotations.GenericGenerator;
  * @author Mailoon
  */
 @Entity
-@Table(name = "Users")
-public class Users {
-    
+@Table(name = "Roles")
+public class Rol {
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
-    private long id;
+    private long id_rol;
     
     @Column(name = "Name")
     private String name;
-    
-    @Column(name = "Phone")
-    private long phone;
-    
-    @Column(name = "Email")
-    private String email;
-    
-    private Address address;
-    
-    // Falta la parte mime para guarda imagenes pero esta por verse
-
-    
     
 }
