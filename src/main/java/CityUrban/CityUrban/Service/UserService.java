@@ -23,7 +23,7 @@ public class UserService {
 
     @Autowired
     private UserRepository userRepository;
-    
+
     @Autowired
     private AddressRepository addressRepository;
 
@@ -65,4 +65,18 @@ public class UserService {
         user.setEmail(modifiedUser.getEmail());
         return userRepository.save(user);
     }
+
+    @Transactional
+    public void deleteUserById(String id) throws MiException {
+        try {
+            userRepository.findById(id).ifPresentOrElse(user -> {
+                userRepository.deleteById(id);
+            }, () -> {
+                throw new MiException("No se encontró ningún usuario con el ID: " + id);
+            });
+        } catch (Exception e) {
+            throw new MiException("Error al intentar eliminar el usuario con ID: " + id);
+        }
+    }
+
 }
